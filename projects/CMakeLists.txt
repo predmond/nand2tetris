@@ -1,6 +1,6 @@
 macro(make_tests)
     get_filename_component(project_number "${CMAKE_CURRENT_SOURCE_DIR}" NAME)
-    file(GLOB chips *.hdl)
+    file(GLOB chips *.tst)
     foreach(chip ${chips})
         get_filename_component(chip_name "${chip}" NAME_WE)
         add_test(NAME ${project_number}_${chip_name}_test
